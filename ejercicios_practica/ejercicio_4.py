@@ -17,7 +17,6 @@ if __name__ == '__main__':
     print("Line Plot: Figura con múltiples gráficos")
 
     # NOTA: aproveche los ejemplos "line_plot" y "scatter_plot" de clase
-
     # Se desea graficar cuatro funciones en una misma figura
     # en cuatros gráficos (axes) distintos. Para el siguiente
     # intervalor de valores de "X":
@@ -43,15 +42,40 @@ if __name__ == '__main__':
     #  graf3 | graf4
     # Utilizar add_subplot para lograr este efecto
     # de "2 filas" "2 columna" de gráficos
-
     # Se debe colocar en la leyenda la función que representa
     # cada gráfico
-
     # Cada gráfico realizarlo con un color distinto
     # a su elección
-
     # Colocar una grilla a elección
-
     # Crear acá su gráfico
+    
+    fig = plt.figure()
+    fig.suptitle('Funciones', fontsize=16)
+    ax1 = fig.add_subplot(2, 2, 1)  
+    ax2 = fig.add_subplot(2, 2, 2)  
+    ax3 = fig.add_subplot(2, 2, 3)
+    ax4 = fig.add_subplot(2, 2, 4)
+    
+    ax1.plot(x, y1, c='g', label = 'Y = X^2')
+    ax1.legend(fontsize= 14)
+    ax1.set_facecolor('orange')
+    ax1.grid(ls= 'dashdot')
 
+    ax2.plot(x, y2, c='r', label = 'Y = X^3')
+    ax2.legend(fontsize= 14)
+    ax2.set_facecolor('silver')
+    ax2.grid(ls= 'solid')
+    
+    ax3.plot(x, y3, c='b', label = 'Y = X^4')
+    ax3.legend(fontsize= 14)
+    ax3.set_facecolor('yellow')
+    ax3.grid(ls= 'dotted')
+    
+    ax4.plot(x, y4, c='y', label = 'Y = Raiz2(X)')
+    ax4.legend(fontsize= 14)
+    ax4.set_facecolor('whitesmoke')
+    ax4.grid(ls= 'dashed')
+    
+    
+    plt.show()
     print("terminamos")

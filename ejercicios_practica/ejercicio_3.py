@@ -27,11 +27,17 @@ if __name__ == '__main__':
 
     # Alumno: Graficar la función utilizando "scatter"
     # utilizando "x" e "y" ya disponible
-
     # Colocar la leyenda y el label con el nombre de la función
-
     # Elegir un marker a elección
-
     # Crear acá su gráfico
-
+    fig = plt.figure()
+    fig.suptitle('Función Tangente', fontsize=16)
+    ax = fig.add_subplot()
+    ax.scatter(x, y, c= 'red', label= 'Tangente', marker = '^')
+    ax.legend(fontsize=12)
+    ax.set_facecolor('lightpink')
+    ax.grid(c = 'g', linestyle = ':', linewidth = 0.75)
+    plt.xlabel('Eje X')
+    plt.ylabel('Eje Y')
+    plt.show()
     print("terminamos")

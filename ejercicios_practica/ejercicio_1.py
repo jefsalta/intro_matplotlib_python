@@ -26,7 +26,6 @@ if __name__ == '__main__':
     y = []
     for i in x:
         y.append(i**2)
-
     # Alumno: Crear una "figura" y crear un "ax" con add_subplot
     # Graficar el "line plot" de "y" en función de "x"
 
@@ -34,5 +33,16 @@ if __name__ == '__main__':
     # Darle color a la línea a su elección
 
     # Crear acá su gráfico
-
+    fig= plt.figure()
+    fig.suptitle('Y= X^2', fontsize= 16)
+    ax= fig.add_subplot()
+    
+    ax.plot(x,y, c= 'b', label= 'y elevado al cuadrado')
+    ax.legend()
+    ax.set_facecolor('aliceblue')
+    ax.grid(c = 'g', linestyle = '--', linewidth = 0.5)
+    plt.xlabel('Eje X')
+    plt.ylabel('Eje Y')
+    plt.show()
+        
     print("terminamos")
